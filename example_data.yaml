@@ -1,9 +1,9 @@
 - model: sites.site
   pk: 1
   fields: {domain: 'localhost:8000', name: 'localhost:8000'}
-- model: sites.site
-  pk: 2
-  fields: {domain: 'votita.127.0.0.1.xip.io:8000', name: ''}
+# - model: sites.site
+#   pk: 2
+#   fields: {domain: 'votita.127.0.0.1.xip.io:8000', name: ''}
 - model: auth.permission
   pk: 1
   fields: {name: Can add site, content_type: 1, codename: add_site}
@@ -613,16 +613,18 @@
 - model: auth.permission
   pk: 202
   fields: {name: Can delete activity, content_type: 72, codename: delete_activity}
+# Usuario: admin
+# Password: admin
 - model: auth.user
   pk: 1
   fields:
-    password: pbkdf2_sha256$30000$jsIz2bPJJXR4$YmXDV7K+0BEN1f7gseS8XpNobFm3rMVJYPfQEzmAXI0=
+    password: pbkdf2_sha256$5$1234$Vv8FIKHzpDDe+0q4UHnLw9SOJHZzi3GohGE0M/tx0Xk=
     last_login: 2017-08-25 21:38:55.729193+00:00
     is_superuser: true
     username: admin
     first_name: ''
     last_name: ''
-    email: admin@admines.cl
+    email: admin@democraciaenred.org
     is_staff: true
     is_active: true
     date_joined: 2017-08-10 22:13:18.124408+00:00
@@ -783,9 +785,9 @@
     birth_date: '', death_date: '', image: '', summary: '', biography: '', national_identity: ''}
 - model: popolo.area
   pk: 1
-  fields: {slug: chile-pais, start_date: null, end_date: null,
+  fields: {slug: argentina-pais, start_date: null, end_date: null,
     created_at: !!timestamp '2017-04-24 16:13:54.111260+00:00', updated_at: !!timestamp '2017-04-24
-      16:13:54.111689+00:00', name: Chile, identifier: '', classification: "Pa\xED\
+      16:13:54.111689+00:00', name: Argentina, identifier: '', classification: "Pa\xED\
       s", parent: null, geom: null, inhabitants: null}
 - model: popolo.area
   pk: 2
@@ -795,15 +797,15 @@
     parent: 5, geom: null, inhabitants: null}
 - model: popolo.area
   pk: 3
-  fields: {slug: araucania-region, start_date: null, end_date: null,
+  fields: {slug: cuyo-region, start_date: null, end_date: null,
     created_at: !!timestamp '2017-04-24 16:13:58.245002+00:00', updated_at: !!timestamp '2017-08-25
-      20:52:51.960387+00:00', name: "Araucan\xEDa", identifier: '', classification: "Regi\xF3\
+      20:52:51.960387+00:00', name: "Cuyo", identifier: '', classification: "Regi\xF3\
       n", parent: 1, geom: null, inhabitants: null}
 - model: popolo.area
   pk: 4
-  fields: {slug: villarrica-comuna, start_date: null, end_date: null,
+  fields: {slug: caballito-comuna, start_date: null, end_date: null,
     created_at: !!timestamp '2017-04-24 16:13:58.744201+00:00', updated_at: !!timestamp '2017-08-25
-      20:52:51.935999+00:00', name: Villarrica, identifier: '', classification: Comuna,
+      20:52:51.935999+00:00', name: Caballito, identifier: '', classification: Comuna,
     parent: 2, geom: null, inhabitants: null}
 - model: popolo.area
   pk: 5
@@ -902,17 +904,17 @@
     updated: !!timestamp '2017-08-25 21:18:21.396013+00:00'}
 - model: backend_candidate.candidacycontact
   pk: 1
-  fields: {candidate: 7, mail: contacto@jefe.cl, times_email_has_been_sent: 0,
+  fields: {candidate: 7, mail: contacto@jefe.com.ar, times_email_has_been_sent: 0,
     used_by_candidate: false, identifier: 0b36ba81-38df-4474-a835-a4879a1084ce, candidacy: 5,
     initial_password: ''}
 - model: backend_candidate.candidacycontact
   pk: 2
-  fields: {candidate: 6, mail: contacto@fiera.cl, times_email_has_been_sent: 0,
+  fields: {candidate: 6, mail: contacto@fiera.com.ar, times_email_has_been_sent: 0,
     used_by_candidate: false, identifier: e0f3242b-d3e5-4f5e-bde8-4c89b6381f5a, candidacy: 6,
     initial_password: ''}
 - model: backend_candidate.candidacycontact
   pk: 3
-  fields: {candidate: 8, mail: contacto@leon.cl, times_email_has_been_sent: 0,
+  fields: {candidate: 8, mail: contacto@leon.com.ar, times_email_has_been_sent: 0,
     used_by_candidate: false, identifier: b65991dd-31e1-44cb-8be7-045d2c2b9591, candidacy: 7,
     initial_password: ''}
 - model: backend_citizen.profile
@@ -953,9 +955,9 @@
     contact_details: '', document: '', image: '', clasification: cultura, for_all_areas: false,
     generated_at: null, is_local_meeting: false, is_reported: false,
     featured: false}
-- model: custom_sites.customsite
-  pk: 1
-  fields: {site: 2, urlconf: votita.stand_alone_urls}
+# - model: custom_sites.customsite
+#   pk: 1
+#   fields: {site: 2, urlconf: votita.stand_alone_urls}
 - model: organization_profiles.organizationtemplate
   pk: 2
   fields: {organization: 4, content: '', logo: '', logo_small: '', background_image: '',
